@@ -1,7 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "League Spartan";
+}
+
+:root {
+    /* ### Primary */
+
+    --Desaturated_Dark_Cyan: hsl(180, 29%, 50%);
+
+    /* ### Neutral */
+
+    --Light_Grayish_Cyan_Background: hsl(180, 52%, 96%);
+    --Light_Grayish_Cyan_Filter_Tablets: hsl(180, 31%, 95%);
+    --Dark_Grayish_Cyan: hsl(180, 8%, 52%);
+    --Very_Dark_Grayish_Cyan: hsl(180, 14%, 20%);
+
+    --fs: 15px;
+}
+
+header {
+    background-image: url("/images/bg-header-desktop.svg");
+    /* background-size: 100vw 104px; */
+    background-size: cover;
+    height: 156px;
+    background-repeat: no-repeat;
+
+    background-color: var(--Desaturated_Dark_Cyan);
 }
