@@ -33,3 +33,9 @@ header {
 
     background-color: var(--Desaturated_Dark_Cyan);
 }
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding-inline: 3em;
+}
