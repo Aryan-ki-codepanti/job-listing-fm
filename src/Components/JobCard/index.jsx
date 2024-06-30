@@ -1,8 +1,6 @@
 import React from "react";
 import "./JobCard.css";
 
-import img from "../../images/loop-studios.svg";
-
 /*
 
 {

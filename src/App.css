@@ -21,7 +21,15 @@
     --Dark_Grayish_Cyan: hsl(180, 8%, 52%);
     --Very_Dark_Grayish_Cyan: hsl(180, 14%, 20%);
 
-    --fs: 15px;
+    --fs: 0.9375rem;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.App {
+    background: var(--Light_Grayish_Cyan_Background);
 }
 
 header {
@@ -38,4 +46,10 @@ header {
     max-width: 1200px;
     margin: auto;
     padding-inline: 3em;
+}
+
+.jobList {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
