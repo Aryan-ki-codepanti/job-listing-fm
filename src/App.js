@@ -5,7 +5,16 @@ import JobCard from "./Components/JobCard";
 import TagList from "./Components/TagList";
 
 function App() {
-    const { jobs } = useContext(JobContext);
+    const { jobs, tags } = useContext(JobContext);
+
+    const isGoodJob = ({ role, level, languages, tools }) => {
+        const job_tags = [role, level, ...languages, ...tools];
+
+        for (const tag of tags) {
+            if (!job_tags.includes(tag)) return false;
+        }
+        return true;
+    };
 
     return (
         <div className="App">
@@ -14,9 +23,9 @@ function App() {
             </header>
 
             <div className="jobList container">
-                {jobs.map(job => (
-                    <JobCard key={job.id} job={job} />
-                ))}
+                {jobs.map(
+                    job => isGoodJob(job) && <JobCard key={job.id} job={job} />
+                )}
             </div>
         </div>
     );
