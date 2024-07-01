@@ -28,7 +28,8 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.App {
+.App,
+body {
     background: var(--Light_Grayish_Cyan_Background);
 }
 
