@@ -11,6 +11,8 @@
     display: flex;
     gap: 2em;
     align-items: center;
+
+    flex-wrap: wrap;
 }
 
 .TagList .cross {
@@ -38,4 +40,13 @@
     margin-left: auto;
     color: var(--Desaturated_Dark_Cyan);
     font-size: var(--fs);
+}
+
+@media screen and (max-width: 600px) {
+    .TagList {
+        padding-block: 1em;
+        translate: 0 calc(156px - calc(var(--ht)));
+
+        gap: 0.4em;
+    }
 }

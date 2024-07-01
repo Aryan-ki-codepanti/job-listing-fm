@@ -103,6 +103,7 @@
 .job-tags {
     display: flex;
     gap: 0.8em;
+    flex-wrap: wrap;
 }
 
 .job-tags span,
@@ -119,4 +120,42 @@
     background: var(--Desaturated_Dark_Cyan);
     color: var(--Light_Grayish_Cyan_Filter_Tablets);
     border-radius: 6px;
+}
+
+.divider {
+    border-top: 1px solid var(--Dark_Grayish_Cyan);
+    margin-top: 0.3em;
+    width: 100%;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .jobList {
+        gap: 5em;
+    }
+    .JobCard {
+        flex-direction: column;
+        align-items: start;
+        padding-top: 2.3em;
+        gap: 1.2em;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+    .logo {
+        position: absolute;
+        width: 60px;
+        inset: 0;
+        left: 30px;
+        top: -45px;
+    }
+
+    .job-tags {
+        margin-left: 0;
+    }
+
+    .divider {
+        display: block;
+    }
 }

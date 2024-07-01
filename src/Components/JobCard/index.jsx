@@ -52,6 +52,7 @@ const JobCard = ({
                     <span>{location}</span>
                 </div>
             </div>
+            <hr className="divider" />
             <div className="job-tags">
                 {job_tags.map((tag, i) => (
                     <span key={i} onClick={e => handleTagAdd(e, tag)}>
