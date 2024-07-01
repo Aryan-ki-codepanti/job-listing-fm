@@ -23,9 +23,14 @@ const JobCard = ({
     const job_tags = [role, level, ...languages, ...tools];
     const { tags, setTags } = useContext(JobContext);
 
-    const handleTagAdd = (e, tagName) => {
-        if (tags.includes(tagName)) return;
+    const handleTagToggle = (e, tagName) => {
+        //remove
+        if (tags.includes(tagName)) {
+            setTags(prev => prev.filter(tag => tag !== tagName));
+            return;
+        }
 
+        //add
         setTags(prev => [...prev, tagName]);
     };
 
@@ -55,7 +60,11 @@ const JobCard = ({
             <hr className="divider" />
             <div className="job-tags">
                 {job_tags.map((tag, i) => (
-                    <span key={i} onClick={e => handleTagAdd(e, tag)}>
+                    <span
+                        key={i}
+                        className={`${tags.includes(tag) ? "highlight" : ""}`}
+                        onClick={e => handleTagToggle(e, tag)}
+                    >
                         {tag}
                     </span>
                 ))}

@@ -122,6 +122,12 @@
     border-radius: 6px;
 }
 
+.job-tags span.highlight {
+    border-radius: 6px;
+    background: var(--Desaturated_Dark_Cyan);
+    color: var(--Light_Grayish_Cyan_Filter_Tablets);
+}
+
 .divider {
     border-top: 1px solid var(--Dark_Grayish_Cyan);
     margin-top: 0.3em;
