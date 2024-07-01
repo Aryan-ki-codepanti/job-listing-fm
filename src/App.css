@@ -34,7 +34,6 @@ body::-webkit-scrollbar {
 
 header {
     background-image: url("/images/bg-header-desktop.svg");
-    /* background-size: 100vw 104px; */
     background-size: cover;
     height: 156px;
     background-repeat: no-repeat;

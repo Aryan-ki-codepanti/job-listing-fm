@@ -7,6 +7,8 @@
     align-items: center;
     gap: 2em;
     border-radius: 6px;
+
+    position: relative;
 }
 
 .logo img {
@@ -62,7 +64,27 @@
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--Very_Dark_Grayish_Cyan);
+
+    cursor: pointer;
 }
+
+.job-info .mid .hoverBorder {
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: var(--Desaturated_Dark_Cyan);
+    inset: 0;
+    border-radius: 6px 0 0 6px;
+
+    display: none;
+}
+.job-info .mid:hover .hoverBorder {
+    display: block;
+}
+.job-info .mid:hover p {
+    color: var(--Desaturated_Dark_Cyan);
+}
+
 .job-info .bottom {
     display: flex;
     align-items: center;

@@ -42,6 +42,7 @@ const JobCard = ({
                 </div>
                 <div className="mid">
                     <p>{position}</p>
+                    <div className="hoverBorder"></div>
                 </div>
                 <div className="bottom">
                     <span>{postedAt}</span>
