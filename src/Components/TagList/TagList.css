@@ -1,10 +1,11 @@
 .TagList {
-    --ht: 80px;
+    --ht: 70px;
 
     background: white;
     translate: 0 calc(156px - calc(var(--ht) / 2));
 
-    padding: 2em;
+    min-height: var(--ht);
+    padding-inline: 2em;
     border-radius: 6px;
 
     display: flex;
