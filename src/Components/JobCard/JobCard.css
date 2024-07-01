@@ -1,11 +1,21 @@
 .JobCard {
-    background: var(--Light_Grayish_Cyan_Filter_Tablets);
+    background: white;
     padding: 2em;
     box-shadow: 10px 20px 40px -30px var(--Desaturated_Dark_Cyan);
 
     display: flex;
     align-items: center;
     gap: 2em;
+}
+
+.logo img {
+    width: 80px;
+    object-fit: cover;
+}
+.logo {
+    display: grid;
+    place-items: center;
+    height: 88px;
 }
 
 .job-tags {
@@ -15,28 +25,67 @@
 .job-info {
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
+    gap: 0.6em;
 }
 
 .job-info .top {
     display: flex;
     gap: 1em;
     font-size: var(--fs);
+    display: flex;
+    align-items: center;
+}
+.job-info .top p {
+    color: var(--Desaturated_Dark_Cyan);
+    font-weight: 700;
+}
+.job-info .top .new,
+.job-info .top .featured {
+    font-weight: 500;
+    padding: 0.3em 0.5em;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.job-info .top .new {
+    background: var(--Desaturated_Dark_Cyan);
+    color: var(--Light_Grayish_Cyan_Filter_Tablets);
+}
+
+.job-info .top .featured {
+    background: var(--Very_Dark_Grayish_Cyan);
+    color: var(--Light_Grayish_Cyan_Filter_Tablets);
 }
 
 .job-info .mid {
     font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--Very_Dark_Grayish_Cyan);
 }
 .job-info .bottom {
     display: flex;
     align-items: center;
     gap: 1em;
     font-size: var(--fs);
+    color: var(--Dark_Grayish_Cyan);
 }
 
 .job-info .dot {
     width: 3px;
     aspect-ratio: 1;
-    background: red;
+    background: var(--Dark_Grayish_Cyan);
     border-radius: 50%;
+}
+
+.job-tags {
+    display: flex;
+    gap: 0.8em;
+}
+
+.job-tags span {
+    font-size: var(--fs);
+    font-weight: 700;
+    color: var(--Desaturated_Dark_Cyan);
+    background: var(--Light_Grayish_Cyan_Filter_Tablets);
+    padding: 0.5em 0.6em;
 }

@@ -47,8 +47,8 @@ const JobCard = ({
             <div className="job-info">
                 <div className="top">
                     <p>{company}</p>
-                    {new_ && <span>New!</span>}
-                    {featured && <span>Featured</span>}
+                    {new_ && <span className="new">New!</span>}
+                    {featured && <span className="featured">Featured</span>}
                 </div>
                 <div className="mid">
                     <p>{position}</p>
