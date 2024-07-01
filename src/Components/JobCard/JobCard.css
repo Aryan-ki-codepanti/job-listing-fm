@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     gap: 2em;
+    border-radius: 6px;
 }
 
 .logo img {
@@ -82,10 +83,18 @@
     gap: 0.8em;
 }
 
-.job-tags span {
+.job-tags span,
+.TagList .tag {
     font-size: var(--fs);
     font-weight: 700;
     color: var(--Desaturated_Dark_Cyan);
     background: var(--Light_Grayish_Cyan_Filter_Tablets);
     padding: 0.5em 0.6em;
+}
+
+.job-tags span:hover {
+    cursor: pointer;
+    background: var(--Desaturated_Dark_Cyan);
+    color: var(--Light_Grayish_Cyan_Filter_Tablets);
+    border-radius: 6px;
 }

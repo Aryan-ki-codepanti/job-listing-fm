@@ -1,24 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./JobCard.css";
-
-/*
-
-{
-    "id": 1,
-    "company": "Photosnap",
-    "logo": "./images/photosnap.svg",
-    "new": true,
-    "featured": true,
-    "position": "Senior Frontend Developer",
-    "role": "Frontend",
-    "level": "Senior",
-    "postedAt": "1d ago",
-    "contract": "Full Time",
-    "location": "USA Only",
-    "languages": ["HTML", "CSS", "JavaScript"],
-    "tools": []
-  }
-*/
+import JobContext from "../../Context/Jobs/JobContext";
 
 const JobCard = ({
     job: {
@@ -39,6 +21,14 @@ const JobCard = ({
     // console.log(job)
     new_ = new_.new;
     const job_tags = [role, level, ...languages, ...tools];
+    const { tags, setTags } = useContext(JobContext);
+
+    const handleTagAdd = (e, tagName) => {
+        if (tags.includes(tagName)) return;
+
+        setTags(prev => [...prev, tagName]);
+    };
+
     return (
         <div className="JobCard">
             <div className="logo">
@@ -63,7 +53,9 @@ const JobCard = ({
             </div>
             <div className="job-tags">
                 {job_tags.map((tag, i) => (
-                    <span key={i}>{tag}</span>
+                    <span key={i} onClick={e => handleTagAdd(e, tag)}>
+                        {tag}
+                    </span>
                 ))}
             </div>
         </div>

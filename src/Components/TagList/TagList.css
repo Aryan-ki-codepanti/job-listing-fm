@@ -1,0 +1,40 @@
+.TagList {
+    --ht: 80px;
+
+    background: white;
+    translate: 0 calc(156px - calc(var(--ht) / 2));
+
+    padding: 2em;
+    border-radius: 6px;
+
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+.TagList .cross {
+    background: var(--Desaturated_Dark_Cyan);
+    display: grid;
+    place-items: center;
+    padding-inline: 0.4em;
+    cursor: pointer;
+}
+
+.TagList .cross:hover {
+    background: var(--Very_Dark_Grayish_Cyan);
+}
+
+.TagList > div {
+    display: flex;
+}
+
+.clear:hover {
+    text-decoration: underline;
+}
+.clear {
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: auto;
+    color: var(--Desaturated_Dark_Cyan);
+    font-size: var(--fs);
+}
